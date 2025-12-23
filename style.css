@@ -1,0 +1,511 @@
+:root {
+
+    --color-primary: #007F3E;
+    --color-primary-hover: #005A29;
+
+    --text-heading: #1D1D1D;
+    --text-body: #4F4F4F;
+    --text-muted: #6D6D6D;
+
+    --text-inverse: #FFFFFF;
+
+    --bg-body: #FFFFFF;
+    --bg-section: #E6F4EA;
+    --bg-card: #FFFFFF;
+    --bg-dark: #004B23;
+    --bg-dark-alt: #2D2D2D;
+
+    --border-light: #E5E5E5;
+    --border-medium: #C8C8C8;
+
+    --bg-hover: #D6EDD8;
+    --bg-active: #AED9A0;
+}
+
+
+
+.solid {
+    border: 2px solid red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg-body);
+}
+
+.top-section {
+    padding-top: 80px;
+    background-color: var(--color-primary);
+}
+
+.navbar {
+    padding: 20px 0;
+    background-color: var(--color-primary);
+}
+
+.navbar h4 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+@media (max-width: 426px) {
+    .navbar h4 {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .navbar h4 {
+        font-size: 0.80rem;
+    }
+}
+
+
+.navbar #menuBtn {
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--color-primary);
+    padding: 40px;
+    transition: 0.4s ease;
+    z-index: 1045;
+}
+
+.sidebar a:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+    transition: 0.2s ease;
+}
+
+.sidebar .close-btn:hover {
+    transform: scale(1.2);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: -500px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 30px;
+    transition: 0.4s ease;
+    z-index: 1055;
+}
+
+.mobile-menu a {
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.mobile-menu.active {
+    top: 70px;
+}
+
+/* /////////////////// */
+/* /////////////// */
+/* //////////////////// */
+
+body {
+    background-color: var(--bg-section);
+}
+
+.about .content {
+    width: 90%;
+}
+
+
+.custom-tabs {
+    border: none !important;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: var(--bg-hover);
+    width: 80%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .about .content {
+        width: 100%;
+    }
+
+    .custom-tabs {
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .custom-tabs .nav-link {
+        border: 2px solid red !important;
+        padding: 0px 0px;
+        margin: 0px;
+        border-radius: 5px;
+        flex: 0 0 auto;
+    }
+
+}
+
+
+
+.custom-tabs .nav-link {
+    border: none !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    flex: 0 0 auto;
+}
+
+.custom-tabs .nav-link {
+    color: var(--text-body);
+    background-color: var(--bg-card);
+    margin: 10px;
+}
+
+.custom-tabs .nav-link.active {
+    color: var(--text-inverse);
+    background-color: var(--color-primary);
+}
+
+.about .tab-content .tab-pane p {
+    color: var(--text-body);
+    padding: 20px 0px 20px 0px;
+}
+
+.services h2 {
+    color: var(--text-heading);
+}
+
+.services .row p {
+    color: var(--text-body);
+}
+
+.services .card {
+    transition: 0.2s ease;
+    background-color: var(--bg-card);
+}
+
+.services .card .card-body h5 {
+    color: var(--text-body);
+}
+
+.services .card .card-body a i {
+    font-size: 14px;
+}
+
+.services .card .card-body a {
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: 0.2s ease;
+    display: inline-block;
+}
+
+.services .card:hover {
+    box-shadow: 1px 1px 10px rgb(213, 213, 213);
+    transform: translateY(-5px);
+}
+
+.services .card:hover .card-body a {
+    transform: translateX(10px);
+    color: var(--color-primary);
+}
+
+.head-btn {
+    padding: 5px 30px;
+    border: 2px solid var(--color-primary);
+    border-radius: 40px;
+    color: var(--text-body);
+    background-color: var(--bg-body);
+    transition: 0.3s ease;
+}
+
+.head-btn:hover {
+    color: var(--text-inverse);
+    background-color: var(--color-primary);
+}
+
+/* 
+.ourteam .card {
+    transition: 0.2s ease;
+    background-color: var(--bg-card);
+}
+
+.ourteam .card h5 {
+    transition: 0.3s ease;
+}
+
+.ourteam .card:hover h5 {
+    color: var(--color-primary);
+}
+
+.ourteam .card-img-hover {
+    transition: transform 0.5s ease;
+}
+
+.ourteam .card-img-hover:hover {
+    transform: scale(1.1);
+} */
+
+
+
+
+.ourteam .card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(178, 178, 178, 0.6);
+    transition: 0.5s;
+    text-align: center;
+    background-color: var(--bg-card);
+}
+
+.ourteam .card img {
+    width: 100%;
+    display: block;
+    transition: 0.5s;
+}
+
+.ourteam .card:hover img {
+    opacity: 0.6;
+}
+
+.ourteam .social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 3;
+}
+
+.ourteam .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: var(--text-inverse);
+    color: var(--color-primary-hover);
+    font-size: 1.25rem;
+    border-radius: 50%;
+    transition: 0.4s ease;
+    transform: translateY(200px);
+    opacity: 0;
+    text-decoration: none;
+}
+
+.ourteam .card:hover .social-icons a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ourteam .social-icons a:hover {
+    background: var(--color-primary);
+    color: var(--text-inverse);
+}
+
+
+
+
+
+.testimonial h1,
+.testimonial h2 {
+    color: var(--text-inverse);
+}
+
+.testimonial .container-fluid {
+    background-color: var(--color-primary);
+}
+
+.testimonial {
+    color: var(--text-inverse);
+}
+
+.contact input {
+    padding: 15px;
+    border-radius: 25px;
+}
+
+.contact textarea {
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.contact .send-btn {
+    padding: 10px 30px;
+    border: 2px solid var(--text-inverse);
+    border-radius: 40px;
+    color: var(--text-inverse);
+    background-color: var(--color-primary);
+    transition: 0.3s ease;
+}
+
+.contact .send-btn:hover {
+    background-color: var(--bg-body);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.contact .cards {
+    padding: 10px 5px 10px 5px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: var(--bg-hover);
+}
+
+.contact input {
+    background-color: var(--bg-card);
+}
+
+footer {
+    background-color: var(--bg-hover);
+}
+
+footer .social-icons i {
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+footer .social-icons i:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-primary-hover);
+}
+
+
+footer .social-icons i {
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: white;
+    box-shadow: 0px 1px 5px rgb(199, 199, 199);
+}
+
+footer li a {
+    text-decoration: none;
+    color: var(--text-body);
+}
+
+footer li i {
+    color: var(--text-body);
+}
+
+
+
+/* animated btn */
+
+.text-box {
+    margin-bottom: 40px;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 8px 30px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.text-box .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-box .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-box .btn-white {
+    background-color: #fff;
+    color: var(--color-primary);
+    font-size: small;
+}
+
+.text-box .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.text-box .btn-white::after {
+    background-color: #fff;
+}
+
+.text-box .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.text-box .btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
